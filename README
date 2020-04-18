@@ -3,7 +3,7 @@ if a url isn't passed during invocation then you'll be asked for one
 
 requires: 
 
-BeautifulSoup
+beautifulsoup4
 PyPDF2
 img2pdf
 requests
