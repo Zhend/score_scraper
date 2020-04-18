@@ -1,0 +1,13 @@
+python3 score_scraper.py scoreURL
+if a url isn't passed during invocation then you'll be asked for one
+
+requires: 
+
+BeautifulSoup
+PyPDF2
+img2pdf
+requests
+cairosvg
+
+get with 
+pip3 install `thing` 
