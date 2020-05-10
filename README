@@ -1,13 +1,15 @@
 python3 ... scoreURL
 if a url isn't passed during invocation then you'll be asked for one
 
-requires: 
+score_scraper requires: 
 
 beautifulsoup4
 PyPDF2
 img2pdf
 requests
 cairosvg
+
+midiscraper requires requests & beautifulsoup4
 
 get with 
 pip3 install `thing` 
