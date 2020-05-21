@@ -16,9 +16,7 @@ elif (len(sys.argv) == 2) :
 soup = BeautifulSoup(r.text, 'html.parser')
 damnit = str(soup)
 
-splitting = damnit.split('.mid')
-
-q = re.search(r'(http|https):\/\/([\w]*)\.(([\w]*)\/){5}(([0-9]*)\/){4}([\w]*)\/(score)', splitting[1])
+q = re.search(r'(http|https):\/\/([\w]*)\.(([\w]*)\/){5}(([0-9]*)\/){4}([\w]*)\/(score)', damnit)
 
 url = q.group(0) + '.mid'
 
