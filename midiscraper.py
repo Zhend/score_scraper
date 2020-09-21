@@ -14,9 +14,9 @@ elif (len(sys.argv) == 2) :
     r = requests.get(sys.argv[-1])
 
 soup = BeautifulSoup(r.text, 'html.parser')
-damnit = str(soup)
+page = str(soup)
 
-q = re.search(r'(http|https):\/\/([\w]*)\.(([\w]*)\/){5}(([0-9]*)\/){4}([\w]*)\/(score)', damnit)
+q = re.search(r'(http|https):\/\/([\w]*)\.(([\w]*)\/){5}(([0-9]*)\/){4}([\w]*)\/(score)', page)
 
 url = q.group(0) + '.mid'
 
