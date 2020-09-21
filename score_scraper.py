@@ -19,17 +19,9 @@ elif (len(sys.argv) == 2) :
 
 p = re.compile('score_\d')
 soup = BeautifulSoup(r.text, 'html.parser')
+page = str(soup)
 
-script = soup.find('script', text = p)
-
-script_text = str(script)
-
-splitting = script_text.split('\n')
-
-for i in splitting: 
-    m = re.search('image', i)
-    if m: 
-        q = re.search(r'(http|https):\\/\\/([\w]*)\.(([\w]*)\\/){5}(([0-9]*)\\/){4}([\w]*)\\/([\w]*).([\w]{3})', i)
+q = re.search(r'(http|https):\\/\\/([\w]*)\.(([\w]*)\\/){5}(([0-9]*)\\/){4}([\w]*)\\/([\w]*).([\w]{3})', page)
         
 source = q.group(0)
 
